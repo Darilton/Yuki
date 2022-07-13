@@ -1,21 +1,26 @@
 #include <stdio.h>
 #include "gastos.h"
 
-void adicionar_gasto(void);
-void editar_gast(void); 
-void mostrar_gastos(void);
-void mostrar_resumo_gastos(void);
-void pesquisar_gasto(void);
-void remover_gasto(void);
-
 typedef struct {
 		char *nome;
-		char *id;
+		long id ;
 		int valor_gasto;
 }gasto;
 
 int main(){
+		int opc;
+
 		for(;;){
+				system("clear");
+				printf("----- YUKI -----");
+				printf("1 - Adicionar Gasto\n");
+				printf("2 - Editar Gasto\n");
+				printf("3 - Mostrar Gastos\n");
+				printf("4 - pesquisar_gasto\n")
+				printf("5 - Mostrar Resumo\n");
+				printf("6 - sair\n");
+
+				scanf("%d", &opc);
 				switch(opc){
 						case 1: adicionar_gasto(); break; 
 						case 2:	editar_gasto(); break;
@@ -24,4 +29,5 @@ int main(){
 						case 5: pesquisar_gasto(); break;
 						case 6: printf("Exit Success\n");
 								exit(EXIT_SUCCESS); break;
+						default:printf("Erro!\n"); break;
 }
